@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	.bgColorImage {
+		background-color: #ffb6c1;
+	}
+	</style>
+</head>
+<body>
+
+<div id ="allFlowers"></div>
+
+<div id="copy"></div>
+
+<!-- template id is a hook for template settings, type can't be javascript ever, id is targeted by singleFlowerView.js-->
+<script id="flowerElement" type="text/template">
+	<a href="#<%= link %>"><img src="<%= img %>" alt="<%= name %>" class ="image" /></a>
+	<ul>
+		<li class="flowerInfo">Name: <%= name %></li>
+		<li class="flowerInfo">Price: <%= price %></li>
+		<li class="flowerInfo">Color: <%= color %></li>
+	</ul>
+</script>
+
+
+<!-- Script calls always have to be in the order or page will break -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src ="js/lib/underscore-min.js"></script>
+<script src ="js/lib/backbone-min.js"></script>
+<script src ="js/models/singleFlowerModel.js"></script>
+<script src ="js/collections/allFlowers.js"></script>
+<script src ="js/views/singleFlowerView.js"></script>
+<script src ="js/views/allFlowersView.js"></script>
+<script src ="js/routes/router.js"></script>
+<script src ="js/flowerApp.js"></script>
+</body>
+</html>
